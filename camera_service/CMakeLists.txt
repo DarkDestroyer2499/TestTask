@@ -4,8 +4,14 @@ project(CameraService)
 
 find_package(OpenCV REQUIRED)
 
-add_executable(CameraService src/main.cpp)
+# Add spdlog library
+find_package(spdlog REQUIRED)
 
-target_link_libraries(CameraService ${OpenCV_LIBS})
+# Add include directory
+include_directories(${CMAKE_SOURCE_DIR}/include)
+
+add_executable(CameraService src/main.cpp src/CameraService.cpp)
+
+target_link_libraries(CameraService ${OpenCV_LIBS} spdlog::spdlog)
 
 install(TARGETS CameraService DESTINATION bin)

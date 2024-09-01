@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 # Set the toolchain file for vcpkg
-set(CMAKE_TOOLCHAIN_FILE "C:/Users/Reaper/Desktop/vcpkg-master/scripts/buildsystems/vcpkg.cmake")
+#set(CMAKE_TOOLCHAIN_FILE "C:/Users/Reaper/Desktop/vcpkg-master/scripts/buildsystems/vcpkg.cmake")
 
 project(MyProject)
 
