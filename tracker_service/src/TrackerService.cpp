@@ -9,7 +9,7 @@ namespace TestTask
 
         // Set up ZeroMQ
         socket.connect("tcp://localhost:5556");
-        socket.set(zmq::sockopt::subscribe, "");
+        socket.setsockopt(ZMQ_SUBSCRIBE, "", 0);
 
         // Set up shared memory
         shm_fd = shm_open(SHM_NAME, O_RDONLY, 0666);
