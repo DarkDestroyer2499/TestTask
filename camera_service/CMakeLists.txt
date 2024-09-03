@@ -12,6 +12,6 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 
 add_executable(CameraService src/main.cpp src/CameraService.cpp)
 
-target_link_libraries(CameraService ${OpenCV_LIBS} spdlog::spdlog)
+target_link_libraries(CameraService ${OpenCV_LIBS} spdlog::spdlog rt)
 
 install(TARGETS CameraService DESTINATION bin)

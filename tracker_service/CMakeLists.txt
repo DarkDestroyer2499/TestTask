@@ -18,7 +18,7 @@ add_executable(TrackerService src/main.cpp src/TrackerService.cpp)
 target_include_directories(TrackerService PRIVATE ${SDL2_INCLUDE_DIRS} ${ZeroMQ_INCLUDE_DIRS})
 
 # Link libraries
-target_link_libraries(TrackerService ${OpenCV_LIBS} ${SDL2_LIBRARIES} ${ZeroMQ_LIBRARIES} spdlog::spdlog)
+target_link_libraries(TrackerService ${OpenCV_LIBS} ${SDL2_LIBRARIES} ${ZeroMQ_LIBRARIES} spdlog::spdlog rt)
 
 # Install target
 install(TARGETS TrackerService DESTINATION bin)

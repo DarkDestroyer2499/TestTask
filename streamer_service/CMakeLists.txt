@@ -17,7 +17,7 @@ file(GLOB SOURCES ${CMAKE_SOURCE_DIR}/streamer_service/src/*.cpp)
 add_executable(StreamerService ${SOURCES})
 
 # Link libraries
-target_link_libraries(StreamerService ${OpenCV_LIBS} ${SDL2_LIBRARIES} spdlog::spdlog)
+target_link_libraries(StreamerService ${OpenCV_LIBS} ${SDL2_LIBRARIES} spdlog::spdlog rt)
 
 # Install target
 install(TARGETS StreamerService DESTINATION bin)

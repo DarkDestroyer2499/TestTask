@@ -16,7 +16,7 @@ file(GLOB SOURCES ${CMAKE_SOURCE_DIR}/service_registry/src/*.cpp)
 add_executable(ServiceRegistry ${SOURCES})
 
 # Link libraries
-target_link_libraries(ServiceRegistry ${OpenCV_LIBS} ${SDL2_LIBRARIES} spdlog::spdlog)
+target_link_libraries(ServiceRegistry ${OpenCV_LIBS} ${SDL2_LIBRARIES} spdlog::spdlog rt)
 
 # Install target
 install(TARGETS ServiceRegistry DESTINATION bin)
